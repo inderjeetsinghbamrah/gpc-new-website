@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme{
+
+    --animate-flip-book: flip 1.2s linear infinite forwards;
+
+    @keyframes flip {
+        0% {
+            transform: rotateY(0deg);
+        }
+        100% {
+            transform: rotateY(360deg);
+        }
+
+    }
+    --font-Roboto: Roboto;
+    --color-body: #505050;
+    --color-preloader:#ff3115;
+    --color-book: #ecf0f1;
+    --color-preloaderBG: #e41f05;
+
+
+}
+
+.book_preload{
+    @apply fixed w-full h-full bg-preloader z-[999999]
+}
+.book{
+    @apply top-1/2 left-0 translate-y-1/2 relative mt-0 mr-auto mb-0
+        ml-auto border-book border-[5px] border-solid w-[100px] h-[60px]
+}
+.book-page{
+    @apply absolute left-1/2 top-[-5px] mt-0 mb-0 mr-auto ml-auto border-t-[5px]
+            border-solid border-book border-b-[5px] border-r-[5px] bg-preloaderBG bg-position-[0]
+            bg-repeat bg-scroll bg-none bg-auto bg-clip-border w-[50px] h-[50px] origin-[0%_50%]
+            animate-flip-book
+}
+
+.book-page:nth-child(1){
+    @apply z-[-1] delay-[1.4s]
+}
