@@ -9,6 +9,27 @@
         0% {
             transform: rotateY(0deg);
         }
+        20%{
+            background:#ff3115;
+        }
+        29.9%{
+            background:#ff3115;
+        }
+        30%{
+            transform:rotateY(-90deg);
+            background:#e41f05;
+        }
+        54.999% {
+            opacity: 1;
+        }
+        55% {
+            opacity: 0;
+        }
+        60% {
+            -webkit-transform: perspective(200px) rotateY(-180deg);
+            transform: perspective(200px) rotateY(-180deg);
+            background: #e41f05;
+        }
         100% {
             transform: rotateY(360deg);
         }
@@ -31,7 +52,7 @@
         ml-auto border-book border-[5px] border-solid w-[100px] h-[60px]
 }
 .book-page{
-    @apply absolute left-1/2 top-[-5px] mt-0 mb-0 mr-auto ml-auto border-t-[5px]
+    @apply absolute left-1/2 top-[0px] mt-0 mb-0 mr-auto ml-auto border-t-[5px]
             border-solid border-book border-b-[5px] border-r-[5px] bg-preloaderBG bg-position-[0]
             bg-repeat bg-scroll bg-none bg-auto bg-clip-border w-[50px] h-[50px] origin-[0%_50%]
             animate-flip-book
